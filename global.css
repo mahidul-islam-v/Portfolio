@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
+/* load after loaded */
+#hideAll{
+  position: fixed;
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  background-color: white;
+  z-index: 99; /* Higher than anything else in the document */
+
+}
+
+/* global style */
 * {
   font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
   color: white;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
 }

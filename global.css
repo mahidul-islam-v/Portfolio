@@ -1,21 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
   color: white;
 }
 
-/* ! */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ! main */
 
 #main {
   background: linear-gradient(rgb(1, 46, 48), rgb(1, 46, 48), rgb(1, 46, 48), rgb(1, 75, 40));
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;  
 }
 
-h1 {
-  padding: 3%;
+/* ? navbar */
+.navbar {
+  position: relative;
+  background-color: aqua;
+  height: 10vh;
+  width: 100vw;
+}
+
+
+/* ? poto */
+.hero {
+  padding-left: 5%;
+  height: 90vh;
+  position: relative;
+  align-self: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.me { 
+  background: url(img/Remove\ background\ project\ \(1\).png);
+  background-size: cover;
+  width: 40rem;
+  height: 100%;
+}
+.me-2 {
+  left: -10%;
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-color: rgba(9, 58, 55, 0.1)
+}
+
+/* ? intro */
+.intro {
+  padding-right: 5vw;
+  position: absolute;
+  top: 40%;
+  text-align: right;
+}
+.hi, .hi- { 
   font-size: 4rem;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline;
 }
-
+.I-am {
+  font-size: 2.5rem;
+  display: block;
+}
+.mahidul-islam{
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+}
+.mahi {
+  font-weight: 200;
+  font-family: 'Nunito', sans-serif;
+  color: rgb(220, 20, 20);
+}

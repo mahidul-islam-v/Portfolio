@@ -1,94 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
-
-/* load after loaded */
-#hideAll{
-  position: fixed;
-  left: 0px; 
-  right: 0px; 
-  top: 0px; 
-  bottom: 0px; 
-  background-color: white;
-  z-index: 99; /* Higher than anything else in the document */
-
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Outfit:wght@100;300;500;700;900&family=Roboto+Mono:wght@100;200;300;500;600;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
 
 /* global style */
 * {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
-  color: white;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* ! main */
 
 #main {
-  background: linear-gradient(rgb(1, 46, 48), rgb(1, 46, 48), rgb(1, 46, 48), rgb(1, 75, 40));
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: end;  
+  color: white;
 }
 
 /* ? navbar */
 .navbar {
+  background: rgb(192, 22, 31);
   position: relative;
-  background-color: aqua;
   height: 10vh;
   width: 100vw;
 }
 
-
-/* ? poto */
-.hero {
-  padding-left: 5%;
-  height: 90vh;
-  position: relative;
-  align-self: start;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.me { 
-  background: url(img/Remove\ background\ project\ \(1\).png);
-  background-size: cover;
-  width: 40rem;
-  height: 100%;
-}
-.me-2 {
-  left: -10%;
-  display: block;
-  position: relative;
-  width: 100vw;
-  height: 90vh;
-  background-color: rgba(9, 58, 55, 0.1)
-}
-
 /* ? intro */
 .intro {
-  padding-right: 5vw;
-  position: absolute;
-  top: 40%;
-  text-align: right;
+  background: url(img/birds_crows_art_166942_2048x1152.jpg);
+  background-position: left;
+  background-size: cover;
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+}
+.intro-1 {
+  padding-left: 5vw;
+  display: inline-block;
+  position: relative;
+  top: 30%;
 }
 .hi, .hi- { 
+  font-family: 'Roboto Mono', monospace;
   font-size: 4rem;
-  display: inline;
 }
+/* TODO: the comma was added for a delayed animation*/
 .I-am {
+  font-family: 'Roboto Mono', monospace;
   font-size: 2.5rem;
-  display: block;
 }
 .mahidul-islam{
+  font-family: 'Nunito', sans-serif;
   font-size: 4rem;
   font-weight: 800;
-  font-family: 'Nunito', sans-serif;
+  
 }
 .mahi {
-  font-weight: 200;
   font-family: 'Nunito', sans-serif;
-  color: rgb(220, 20, 20);
+  font-weight: 100;
+  color: rgb(255, 0, 0);
+}
+/* TODO:animate it to this from plain one */
+.description {
+  font-size: 1.25rem;
+  margin-top: 2.5%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.ux-ui-dev > hr {
+  margin-top: 5px;
+  border: 1px solid rgb(255, 0, 0);
+}
+.ux-ui ,.dev {
+  line-height: 1.25rem;
+  font-size: 1.5rem;
+}
+.ux-ui {
+  font-size: 2rem;
+  font-family: 'DM Serif Display', serif;
+}
+.dev {
+  font-family: 'Source Code Pro', monospace;
+}
+.see-more {
+  position: relative;
+  left: 25rem;
+  border: 25px solid transparent;
+  border-radius: 7.85px;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 2.5vh;
+  color: white;
+  height: 5rem;
+  width: 15rem;
+  letter-spacing: 0rem;
+  font-size: 1rem;
+  transition: 0.5s ease-out;
+}
+.see-more:hover {
+  left: 22.5rem;
+  width: 20rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  border: 0px solid red;
+  background-color: white;
+  color: red;
+}
+
+
+
+/* ! about */
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  background: blue;
 }

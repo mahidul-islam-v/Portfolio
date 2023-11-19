@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ? navbar */
 .navbar {
+  z-index: 99;
   background: rgb(192, 22, 31);
   position: relative;
   height: 10vh;
@@ -35,7 +36,8 @@ h1, h2, h3, h4, h5, h6 {
   background-position: left;
   background-size: cover;
   position: relative;
-  height: 90vh;
+  top: -0.1vh;
+  height: 90.5vh;
   width: 100vw;
 }
 .intro-1 {
@@ -89,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .see-more {
   position: relative;
-  left: 25rem;
+  left: 17.5rem;
   border: 25px solid transparent;
   border-radius: 7.85px;
   background-color: rgba(255, 255, 255, 0);
@@ -102,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s ease-out;
 }
 .see-more:hover {
-  left: 22.5rem;
+  left: 15rem;
   width: 20rem;
   font-size: 1.5rem;
   font-weight: 900;

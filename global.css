@@ -140,12 +140,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @keyframes dul {
   60% {
-    left: 1rem;
-    letter-spacing: 2.5rem;
+    left: -1rem;
+    letter-spacing: 1.5rem;
     opacity: 0;
   }
   to {
-    left: 0;
+    left: -1rem;
     letter-spacing: normal;
     opacity: 1;
   }

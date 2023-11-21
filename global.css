@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Outfit:wght@100;300;500;700;900&family=Roboto+Mono:wght@100;200;300;500;600;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@200..1000&family=Outfit:wght@100..900&family=Roboto+Mono:wght@100..700&family=Source+Code+Pro:wght@200..900&display=swap');
 
 /* global style */
 * {
@@ -46,25 +46,109 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 30%;
 }
-.hi, .hi- { 
+.hi {
   font-family: 'Roboto Mono', monospace;
-  font-size: 4rem;
+  display: inline-block;
+  animation: 0.5s ease 0.5s forwards;
+  animation-name: hi, hai;
+  height: 5rem;
+  opacity: 0;
+  font-size: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+.delayed-comma {
+  animation: 0.5s ease hi 0.75s forwards;
+  opacity: 0;
+}
+@keyframes hi {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hai {
+  to {
+    font-size: 4rem;
+  }
 }
 /* TODO: the comma was added for a delayed animation*/
 .I-am {
+  position: relative;
+  display: inb;
   font-family: 'Roboto Mono', monospace;
   font-size: 2.5rem;
+  animation: 0.5s ease I-am 1.5s forwards;
+  left: -15vw;
+  opacity: 0;
+}
+@keyframes I-am {
+  25% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
 }
 .mahidul-islam{
-  font-family: 'Nunito', sans-serif;
+  position: relative;
   font-size: 4rem;
   font-weight: 800;
-  
+  color: white;
 }
 .mahi {
+  position: relative;
   font-family: 'Nunito', sans-serif;
+  animation: 2s ease mahi 2s forwards;
+  color: white;
+  opacity: 0;
+  text-shadow: 0px 0px 0px red;
   font-weight: 100;
-  color: rgb(255, 0, 0);
+  left: 0.25rem;
+}
+@keyframes mahi {
+  20%{
+    color: white;
+  }
+  40% {
+    left: 0rem;
+    text-shadow: 0px 0px 75px red;
+    font-weight: 900;
+    opacity: 1;
+  }
+  60% {
+    left: 0rem;
+    text-shadow: 0px 0px 50px red;
+    font-weight: 900;
+    opacity: 1;
+  }
+  to {
+    color: red;
+    left: 0.25rem;
+    text-shadow: 0 0 1px red;
+    font-weight: 200;
+    opacity: 1;
+  }
+}
+.dul-islam {
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  animation: 2s ease dul 2s forwards;
+  letter-spacing: 1rem;
+  left: 1rem;
+  opacity: 0;
+}
+@keyframes dul {
+  60% {
+    left: 1rem;
+    letter-spacing: 2.5rem;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
 /* TODO:animate it to this from plain one */
 .description {
@@ -90,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Code Pro', monospace;
 }
 .see-more {
+  font-family: 'Outfit', sans-serif;
   position: relative;
   left: 17.5rem;
   border: 25px solid transparent;

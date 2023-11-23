@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@200..1000&family=Outfit:wght@100..900&family=Roboto+Mono:wght@100..700&family=Source+Code+Pro:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 /* global style */
 * {
@@ -71,13 +72,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 4rem;
   }
 }
-/* TODO: the comma was added for a delayed animation*/
 .I-am {
   position: relative;
   display: inb;
   font-family: 'Roboto Mono', monospace;
   font-size: 2.5rem;
-  animation: 0.5s ease I-am 1.5s forwards;
+  animation: 0.75s ease I-am 1.25s forwards;
   left: -15vw;
   opacity: 0;
 }
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 .mahi {
   position: relative;
   font-family: 'Nunito', sans-serif;
-  animation: 2s ease mahi 2s forwards;
+  animation: 1.5s ease mahi 2s forwards;
   color: white;
   opacity: 0;
   text-shadow: 0px 0px 0px red;
@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes mahi {
   20%{
     color: white;
+    text-shadow: 0px 0px 50px red;
   }
   40% {
     left: 0rem;
@@ -133,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 .dul-islam {
   position: relative;
   font-family: 'Nunito', sans-serif;
-  animation: 2s ease dul 2s forwards;
+  animation: 1.5s ease dul 2s forwards;
   letter-spacing: 1rem;
   left: 1rem;
   opacity: 0;
@@ -150,7 +151,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
-/* TODO:animate it to this from plain one */
 .description {
   font-size: 1.25rem;
   margin-top: 2.5%;
@@ -158,20 +158,146 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   align-items: center;
 }
+.I-am-an {
+  transform: scale(1.2);
+  animation: 0.5s ease uchiha 4s forwards;
+  opacity: 0;
+}
+@keyframes uchiha {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .ux-ui-dev > hr {
-  margin-top: 5px;
+  position: absolute;
+  top: 48%;
+  width: 0;
+  opacity: 0;
   border: 1px solid rgb(255, 0, 0);
+  animation: 1s ease ux-ui 4.25s forwards;
 }
-.ux-ui ,.dev {
-  line-height: 1.25rem;
-  font-size: 1.5rem;
+@keyframes ux-ui {
+  from {
+    opacity: 0;
+  }
+  60% {
+    width: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    border: 1px solid red;
+  }
 }
-.ux-ui {
+.ux-ui-dev {
+  height: 5rem;
+}
+.ux-ui-dev, .designer, .ux, .ui{
+  line-height: 1.75rem;
+  position: relative;
   font-size: 2rem;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fredericka the Great', serif;
+}
+.ux {
+  opacity: 0;
+  transform: translate(2rem,0);
+  display: inline-block;
+  animation: 1s ease ux 4.25s forwards;
+}
+@keyframes ux {
+  50%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  60%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+   to {
+    opacity: 1;
+    transform: translate(0.5rem, -0.4rem);
+  }
+}
+.slash {
+  animation: 1s ease slash-enlarge 4.25s forwards;
+  opacity: 0;
+}
+@keyframes slash-enlarge {
+  60%{
+    font-size: 2rem;
+    font-weight: normal;
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+}
+.ui {
+  opacity: 0;
+  transform: translate(-2rem,0);
+  display: inline-block;
+  animation: 1s ease ui 4.25s forwards;
+}
+@keyframes ui {
+  50%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  60%{
+    opacity: 1;
+    transform: translate(0,0);
+  }   to {
+    opacity: 1;
+    transform: translate(-0.5rem, 0.4rem);
+  }
+}
+.designer{
+  opacity: 0;
+  animation: 1s ease designer 4.25s forwards;
+}
+@keyframes designer {
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.and {
+  width: fit-content;
+  bottom: 0.75rem;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  animation: 0.5s ease and 5.5s forwards;
+}
+@keyframes and {
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .dev {
+  width: max-content;
+
+  opacity: 0;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
   font-family: 'Source Code Pro', monospace;
+  animation: 0.5s ease dev 6.25s forwards;
+}
+@keyframes dev {
+  to {
+    opacity: 1;
+  }
 }
 .see-more {
   font-family: 'Outfit', sans-serif;

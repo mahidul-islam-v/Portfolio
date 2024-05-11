@@ -12,17 +12,42 @@
 }
 
 
-
+/* custom font */
 @font-face {
    font-family: design;
    src: url(fonts/against.ttf);
 }
 
+/* scroll bar */
+*::-webkit-scrollbar {
+   width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+   border-radius: 8px;
+   background-color: #e7e7e700;
+   border: 0 solid #cacaca00;
+}
+
+*::-webkit-scrollbar-thumb {
+   border-radius: 8px;
+   border: 3px solid transparent;
+   background-clip: content-box;
+   background-color: var();
+}
+
+/* universal styles */
 * {
    color: var(--text);
    margin: 0;
    padding: 0;
    font-family: var(--sans2);
+}
+html {
+   scroll-snap-type: y proximity;
+}
+section {
+   scroll-snap-align: start;
 }
 ol, ul {
    list-style: none;
@@ -90,7 +115,7 @@ small {
   text-decoration: none;
   color: var(--text);
   text-shadow: 0 0 0 transparent;
-  transition: border-color 0.5s 0.5s, clip-path 1.5s ease-in-out, text-shadow 0.25s 1.4s;
+  transition: border-color 0.5s 0.5s, clip-path 1.5s ease-in-out, text-shadow 0.25s 1.4s, font-weight 0.25s 1.5s, letter-spacing 0.25s 1.5s;
   opacity: 1;
 }
 .see-more:hover {
@@ -100,6 +125,8 @@ small {
   clip-path: polygon(0 48%, 2% 48%, 2% 2%, 98% 2%, 98% 48%, 100% 48%, 100% 52%, 98% 52%, 98% 98%, 2% 98%, 2% 52%, 0 52%);
   border-color: transparent;
   opacity: 1;
+  letter-spacing: -0.02rem;
+  font-weight: 500;
 }
 .see-more:hover:active {
   transform: scale(1.02);
@@ -160,7 +187,6 @@ small {
    font-weight: 600;
    font-size: 2rem;
   font-family: var(--serif);
-  margin-bottom: rem;
 }
 
 .cards {
@@ -292,100 +318,134 @@ small {
 }
 
 #skills h1 {
+   color: var(--action);
    font-size: 5rem;
-   font-family: var(--sans);
-   font-weight: 800;
+   font-weight: 600;
+   font-family: design, sans-serif;
 }
 
 .languages {
    margin: 3rem;
 }
 
-.languages>div {
-   background-color: green;
-   width: 3rem;
-   top: 1rem;
+.languages h2 {
+   font-size: 3rem;
+   font-weight: 600;
+}
+
+.com {
+   height: 40%;
+   margin-top: 2rem ;
+   user-select: none;
    position: relative;
+   border-radius: 25px;
+   writing-mode: vertical-rl;
+   width: 3rem;
    transition: 0.75s ease;
 }
-
-.lang-h3, .lang-bg {
-   writing-mode: vertical-lr;
-   user-select: none;
-   background-color: var(--mono);
-   border: 0px solid;
-   border-radius: 25px;
-   padding: 1.5rem 0.5rem 1rem 0.5rem ;
-}
-
-.lang-h3 {
-   position: absolute;
-   right: 0;
-   z-index: 1;
-}
-.lang-bg {
-   width: 3rem;
-   color: #00000000;
-   position: absolute;
-   top: 0;
-   background-color:var(--background);
-   box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.18);
-   opacity: 0;
-   transition: 0.5s ease;
-   background-image: url(objects/24717305_6997864.png);
-   background-size: cover;
-}
-.languages>div:hover{
+.com-hover {
    width: 95%;
 }
-.languages>div:hover .lang-bg{
-   width: calc(100% - 4rem);
-   opacity: 1;
-}
-.languages>div:hover .lang-bg span {
-   animation: lang-bg 0.75s ease 1s forwards;
+
+.com-top, .com-bottom {
+   height: 100%;
+   border-radius: 25px;
+   padding: 1rem 0.5rem 1.25rem;
 }
 
-.lang-bg span {
+.com-top {
+   background-color: #e72323;
+   color: var(--background);
    position: absolute;
+   right: -1%;
+}
+.com-top h3 {
+   font-weight: bold;
+   display: flex;
+   letter-spacing: 0.1rem;
+   justify-content: center;
+}
+
+.com-bottom {
+   color: #00000000;
+   width: 95%;
+   opacity: 1;
+   position: relative;
+   left: -5%;
+   transition: 0.25s ease ;
+   background-image: url(objects/24717305_6997864.png);
+   background-size: cover;
+   background-position: center 8%;
+   box-shadow:  0px 0px 15px 5px rgba(0, 0, 0, 0.18);
+}
+
+.com-hover .com-bottom {
+   opacity: 1;
+}
+
+.com p {
+   position: absolute;
+   border-radius: 25px;
    top: 0;
    right: 0;
-   border-radius: 25px;
-   border: 0px solid;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   writing-mode: horizontal-tb;
    width: 100%;
    height: 100%;
-   background-color: var(--mono);
-   opacity: 1;
+   text-align: center;
+   font-size: 6rem;
+   text-wrap: nowrap;
+   color: var(--background);
+   font-weight: bolder;
+   letter-spacing: -0.1rem;
+   background: var(--mono);
    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-   transition-delay: 0.75s;
+   animation: com-lang-reverse 1.5s ease forwards;
+   
 }
 
-@keyframes lang-bg {
-   to {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.com-hover p {
+   animation: com-lang 1s ease 0.9s forwards;
+}
+
+@keyframes com-lang {
+   from {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+   }to {   
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }
+}@keyframes com-lang-reverse {
+   from {
+      color: #EDF2F4;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }50% {
+      color: #8d99ae00;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }90% {
+      color: #8d99ae00;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }to {   
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+      color: #8d99ae00;
    }
 }
 
-.lang-bg span p {
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   writing-mode: horizontal-tb;
-   font-size: 6rem;
-   letter-spacing: -0.25rem;
-   color: var(--background);
-   font-weight: 800;
-   width: 100%;
-   height: 100%;
+.com-bottom-2 {
+   background-image: url(objects/vecteezy_vector-concept-illustration-programmer-engineer-with-laptop_7938815.png);
+   background-size: cover;
+   background-position: center 30%;
 }
 
-.and-more {
-   font-size: 6rem;
-   font-family: design, sans-serif;
-   font-weight: 500;
-   margin-top: 25rem;
-   text-align: center;
+.com-hover:nth-child(3) p{
+  
 }
+
+
+
+
+
 
 
 

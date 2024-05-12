@@ -20,6 +20,9 @@
 
 /* scroll bar */
 *::-webkit-scrollbar {
+   display: none;
+   visibility: visible;
+   position: absolute;
    width: 16px;
 }
 
@@ -33,7 +36,7 @@
    border-radius: 8px;
    border: 3px solid transparent;
    background-clip: content-box;
-   background-color: var();
+   background-color: var(--secondary);
 }
 
 /* universal styles */
@@ -318,10 +321,10 @@ small {
 }
 
 #skills h1 {
-   color: var(--action);
-   font-size: 5rem;
-   font-weight: 600;
+   color: #e61d2e;
+   font-size: 6rem;
    font-family: design, sans-serif;
+   margin-left: 3rem;
 }
 
 .languages {
@@ -329,6 +332,7 @@ small {
 }
 
 .languages h2 {
+   margin-bottom: 1rem;
    font-size: 3rem;
    font-weight: 600;
 }
@@ -344,7 +348,7 @@ small {
    transition: 0.75s ease;
 }
 .com-hover {
-   width: 95%;
+   width: 99%;
 }
 
 .com-top, .com-bottom {
@@ -395,11 +399,11 @@ small {
    width: 100%;
    height: 100%;
    text-align: center;
-   font-size: 6rem;
+   font-size: 6.5rem;
    text-wrap: nowrap;
    color: var(--background);
    font-weight: bolder;
-   letter-spacing: -0.1rem;
+   letter-spacing: -0.4rem;
    background: var(--mono);
    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
    animation: com-lang-reverse 1.5s ease forwards;
@@ -437,12 +441,6 @@ small {
    background-size: cover;
    background-position: center 30%;
 }
-
-.com-hover:nth-child(3) p{
-  
-}
-
-
 
 
 
